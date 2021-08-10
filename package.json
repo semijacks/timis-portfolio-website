@@ -5,7 +5,7 @@
   "scripts": {
     "next:dev": "next dev",
     "sanity:dev": "cd studio && sanity start",
-    "build": "npm run build:sanity && pwd && npm run build:web",
+    "build": "npm run build:web",
     "build:web": "next build",
     "build:sanity": "cd studio && sanity build ../public/studio -y && cd ..",
     "start": "next start"
