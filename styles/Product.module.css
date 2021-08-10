@@ -1,0 +1,146 @@
+.contentContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.productIntro h2 {
+  font-family: var(--bowlby-one-font);
+  font-weight: 400;
+  font-size: 52.5px;
+  letter-spacing: 10.43px;
+  line-height: 82.24px;
+  margin-bottom: -0.8em;
+}
+
+.productIntro p {
+  font-family: var(--primary-text);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 35.2px;
+  line-height: 60.46px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 190px;
+}
+
+.siteLink {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 3000ms;
+  margin-top: 10px;
+}
+
+.siteLink:hover {
+  text-decoration: underline;
+}
+
+.siteLink a {
+  font-family: var(--pt-sans-font);
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 26px;
+}
+
+.lists {
+  display: flex;
+  justify-content: space-between;
+  gap: 10em;
+}
+
+.list h3 {
+  font-family: var(--pt-mono-font);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 25.09px;
+  letter-spacing: 2px;
+}
+
+.list ul {
+  list-style-type: none;
+  padding-left: 0pt;
+}
+
+.list li {
+  font-family: var(--pt-mono-font);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 25.09px;
+  letter-spacing: 2px;
+}
+
+.researchSection {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.researchIntro h3 {
+  font-family: var(--bowlby-one-font);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36.58px;
+  line-height: 57.3px;
+  letter-spacing: 5.46px;
+}
+
+.researchIntro p {
+  font-family: var(--pt-mono-font);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 23.3px;
+  letter-spacing: 1px;
+  margin-top: -2em;
+  max-width: 301px;
+}
+
+.researchGallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 3em;
+  gap: 120px;
+}
+
+.descriptionAndLink {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.descriptionAndLink p {
+  font-family: var(--pt-mono-font);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10.61px;
+  line-height: 19.01px;
+  letter-spacing: 1px;
+  max-width: 233px;
+}
+
+.userTypesSection {
+  margin-bottom: 5em;
+}
+
+.userTypesSection h3 {
+  font-family: var(--bowlby-one-font);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20.61;
+  line-height: 32.28px;
+  letter-spacing: 4.19px;
+}
+
+.userTypesGallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 3em;
+  gap: 0px;
+  margin-top: -2em;
+}

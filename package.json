@@ -1,0 +1,20 @@
+{
+  "name": "timis-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "next:dev": "next dev",
+    "sanity:dev": "cd studio && sanity start",
+    "build": "npm run build:sanity && pwd && npm run build:web",
+    "build:web": "next build",
+    "build:sanity": "cd studio && sanity build ../public/studio -y && cd ..",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@sanity/image-url": "^0.140.19",
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  }
+}

@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--header-text);
+  height: 220px;
+  font-weight: 400;
+  font-size: 23px;
+  letter-spacing: 1px;
+  line-height: 29.76px;
+  padding-top: 1em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.headerIcon a {
+  font-family: "Helvetica";
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 26.45px;
+  letter-spacing: 1px;
+}
+
+.headerLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-top: 0;
+}
+
+.headerLinks a {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 23px;
+  line-height: 29.76px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding-bottom: 1.2em;
+}
+
+.headerLinks a:hover {
+  text-decoration: underline;
+}
