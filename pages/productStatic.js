@@ -1,12 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
-import ProductCard from "../components/ProductCard";
-import { products } from "../utils/products";
 import Container from "../Layout/Container";
 import styles from "../styles/Product.module.css";
 import ArrowIcon from "../public/icons/ArrowIcon";
 
-export default function Product() {
+export default function ProductStatic() {
   return (
     <>
       <Head>

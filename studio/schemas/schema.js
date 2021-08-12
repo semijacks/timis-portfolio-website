@@ -44,9 +44,61 @@ export default createSchema({
           },
         },
         {
+          name: "sitePreviewImage",
+          title: "Site Preview Image",
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+        },
+        {
           name: "is__showcase",
           type: "boolean",
           title: "Is this a showcase project?",
+        },
+        {
+          name: "thingsIDid",
+          title: "Things I did",
+          type: "array",
+          of: [{ type: "string" }],
+        },
+        {
+          name: "collaborators",
+          title: "Collaborators",
+          type: "array",
+          of: [{ type: "string" }],
+        },
+        {
+          name: "section1HeaderText",
+          type: "string",
+          title: "Section1 Header Text",
+        },
+        {
+          name: "section1BodyText",
+          type: "string",
+          title: "Section1 Body Text",
+        },
+        {
+          name: "section1SnippetText",
+          type: "string",
+          title: "Section1 Snippet Text",
+        },
+        {
+          name: "section1Images",
+          title: "Section1 Images",
+          type: "array",
+          of: [{ type: "image" }],
+        },
+        {
+          name: "section2HeaderText",
+          type: "string",
+          title: "Section2 Header Text",
+        },
+        {
+          name: "section2Images",
+          title: "Section2 Images",
+          type: "array",
+          of: [{ type: "image" }],
         },
       ],
     },

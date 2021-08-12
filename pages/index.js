@@ -3,18 +3,14 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import ProductCard from "../components/ProductCard";
 import Container from "../Layout/Container";
-import imageUrlBuilder from "@sanity/image-url";
+import imgBuilder from "../utils/imageBuilder";
 
 export default function Home({ products }) {
+  console.log(process.env.SANITY_STUDIO_API_PROJECT_ID);
   const [mappedProducts, setMappedProducts] = useState([]);
 
   useEffect(() => {
     if (products.length) {
-      const imgBuilder = imageUrlBuilder({
-        projectId: "pwa9amt7",
-        dataset: "production",
-      });
-
       setMappedProducts(
         products.map((product) => {
           return {
@@ -84,7 +80,8 @@ export default function Home({ products }) {
 }
 
 export const getServerSideProps = async (pageContext) => {
-  const projectId = process.env.SANITY_PROJECT_ID;
+  const projectId = process.env.SANITY_STUDIO_API_PROJECT_ID;
+  console.log(projectId);
   const query = encodeURIComponent('*[ _type == "product" ]');
   const url = `https://${projectId}.api.sanity.io/v1/data/query/production?query=${query}`;
   const result = await fetch(url).then((res) => res.json());

@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "timis-portfolio-cms"
-  },
   "api": {
     "projectId": "pwa9amt7",
     "dataset": "production"
+  },
+  "project": {
+    "name": "timis-portfolio-cms"
   },
   "plugins": [
     "@sanity/base",
