@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "../styles/ProductCard.module.css";
 import ArrowIcon from "../public/icons/ArrowIcon";
 
-const Product = ({ image, title, description, linkText }) => {
+const Product = ({ image, title, description, linkText, slug }) => {
   return (
     <div className={styles.product}>
       <div className={styles.productCard}>
@@ -15,7 +15,7 @@ const Product = ({ image, title, description, linkText }) => {
       </div>
       <div className={styles.productLink}>
         <ArrowIcon />
-        <Link href="/product">
+        <Link href={`/product/${slug}`}>
           <a>{linkText}</a>
         </Link>
       </div>

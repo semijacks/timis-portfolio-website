@@ -10,6 +10,7 @@ const Product = ({
   title,
   description,
   previewImage,
+  productLink,
   thingsIDid,
   collaborators,
   section1HeaderText,
@@ -40,8 +41,8 @@ const Product = ({
               />
               <div className={styles.siteLink}>
                 <ArrowIcon />
-                <Link href="/">
-                  <a>open site</a>
+                <Link href={`${productLink}`} target="_blank">
+                  <a target="_blank">open site</a>
                 </Link>
               </div>
             </div>
@@ -71,14 +72,16 @@ const Product = ({
               <p>{section1BodyText}</p>
             </div>
             <div className={styles.researchGallery}>
-              {section1Images.map((image, idx) => (
-                <img
-                  key={idx}
-                  src={imgBuilder.image(image).width(286).height(254)}
-                  alt="product image"
-                  className="productImage"
-                />
-              ))}
+              {section1Images
+                ? section1Images.map((image, idx) => (
+                    <img
+                      key={idx}
+                      src={imgBuilder.image(image).width(286).height(254)}
+                      alt="product image"
+                      className="productImage"
+                    />
+                  ))
+                : null}
             </div>
             <div className={styles.descriptionAndLink}>
               <p>{section1SnippetText}</p>
@@ -94,14 +97,16 @@ const Product = ({
           <div className={styles.userTypesSection}>
             <h3>{section2HeaderText}</h3>
             <div className={styles.userTypesGallery}>
-              {section2Images.map((image, idx) => (
-                <img
-                  key={idx}
-                  src={imgBuilder.image(image).width(163).height(205)}
-                  alt="product image"
-                  className="productImage"
-                />
-              ))}
+              {section2Images
+                ? section2Images.map((image, idx) => (
+                    <img
+                      key={idx}
+                      src={imgBuilder.image(image).width(163).height(205)}
+                      alt="product image"
+                      className="productImage"
+                    />
+                  ))
+                : null}
             </div>
           </div>
         </div>
@@ -139,14 +144,19 @@ export const getServerSideProps = async (pageContext) => {
         description: product.description,
         mainImage: product.mainImage,
         previewImage: product.sitePreviewImage,
+        productLink: product.productLink,
         thingsIDid: [...product.thingsIDid],
         collaborators: [...product.collaborators],
         section1HeaderText: product.section1HeaderText,
         section1BodyText: product.section1BodyText,
         section1SnippetText: product.section1SnippetText,
         section2HeaderText: product.section2HeaderText,
-        section1Images: [...product.section1Images],
-        section2Images: [...product.section2Images],
+        section1Images: product.section1Images
+          ? [...product.section1Images]
+          : null,
+        section2Images: product.section2Images
+          ? [...product.section2Images]
+          : null,
       },
     };
   }

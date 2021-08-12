@@ -52,6 +52,11 @@ export default createSchema({
           },
         },
         {
+          name: "productLink",
+          title: "Product Link",
+          type: "string",
+        },
+        {
           name: "is__showcase",
           type: "boolean",
           title: "Is this a showcase project?",

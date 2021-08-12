@@ -57,21 +57,25 @@ export default function Home({ products }) {
               </p>
             </div>
 
-            {mappedProducts.length ? (
-              mappedProducts.map(
-                ({ mainImage, title, description, is__showcase }, idx) => (
-                  <ProductCard
-                    key={idx}
-                    image={mainImage}
-                    title={title}
-                    description={description}
-                    linkText={is__showcase ? "see showcase" : "view case study"}
-                  />
+            {mappedProducts.length
+              ? mappedProducts.map(
+                  (
+                    { mainImage, title, description, is__showcase, slug },
+                    idx
+                  ) => (
+                    <ProductCard
+                      key={idx}
+                      image={mainImage}
+                      title={title}
+                      description={description}
+                      linkText={
+                        is__showcase ? "see showcase" : "view case study"
+                      }
+                      slug={slug.current}
+                    />
+                  )
                 )
-              )
-            ) : (
-              <>No Projects Yet </>
-            )}
+              : null}
           </div>
         </div>
       </Container>
