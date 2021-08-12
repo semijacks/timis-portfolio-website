@@ -6,7 +6,6 @@ import Container from "../Layout/Container";
 import imgBuilder from "../utils/imageBuilder";
 
 export default function Home({ products }) {
-  console.log(process.env.SANITY_STUDIO_API_PROJECT_ID);
   const [mappedProducts, setMappedProducts] = useState([]);
 
   useEffect(() => {
